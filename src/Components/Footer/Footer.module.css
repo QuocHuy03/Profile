@@ -1,0 +1,47 @@
+.footer {
+    height: 300px;
+    background-color: var(--bg-header);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3.8rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.links__list,
+.socical__list {
+    margin-top: 16px;
+}
+
+.links__item {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 16px;
+}
+
+.social__img {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    box-shadow: 0 0 5px 5px #fff;
+    border-radius: 50%;
+}
+
+.text {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 1.2rem;
+}
+
+/* ============================= MOBILE CSS ============================= */
+@media (max-width: 48em) {
+    .footer {
+        margin-top: 48px;
+    }
+}

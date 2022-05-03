@@ -1,0 +1,48 @@
+.wrap {
+    width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 24px 32px;
+    margin-top: 60px;
+    line-height: 2;
+    max-width: 90%;
+}
+
+.content {
+    font-size: 1.6rem;
+    color: #222;
+    text-align: justify;
+}
+
+.btn__contact {
+    font-size: 1.6rem;
+    background-color: var(--bg-nav);
+    float: right;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 2rem;
+    transition: transform .2s ease-in-out;
+    text-align: center;
+}
+
+.btn__contact:hover {
+    transform: scale(1.03);
+}
+
+.wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ======================== MOBILE RESPONSIVE ======================== */
+@media (max-width: 48em) {
+    .btn__contact {
+        width: 100%;
+        padding: 16px;
+        margin-top: 16px;
+    }
+}

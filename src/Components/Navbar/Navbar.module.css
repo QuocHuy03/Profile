@@ -1,0 +1,119 @@
+.nav__menu {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    background:  linear-gradient(45deg, var(--bg-nav), var(--bg-header));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    transform: translateX(-50%);
+    padding: 2px 16px;
+    border-radius: 20px;
+    z-index: 8;
+}
+
+.nav__link {
+    padding: 6px;
+    display: block;
+}
+
+.nav__link i{
+    font-size: 1.6rem;
+    color: #fff;
+    transition: transform .2s ease-in-out;
+}
+
+.nav__link:hover i{
+    transform: scale(1.3);
+}
+
+/* ============================= MOBILE CSS ============================= */
+@media (max-width: 48em) {
+    .nav__menu {
+        flex-direction: column;
+        width: auto;
+        padding: 16px 8px;
+        top: 50%;
+        right: 10px;
+        left: auto;
+        bottom: auto;
+        transform: translateX(60px) translateY(-50%);
+        opacity: 0;
+        animation: slideOut .8s ease-in-out forwards;
+    }
+
+    .nav__item + .nav__item{
+        margin-top: 12px;
+    }
+
+    .nav__link {
+        font-size: 3rem;
+    }
+
+    .showNav {
+        position: fixed;
+        background:  linear-gradient(45deg, var(--bg-nav), var(--bg-header));
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        right: -32px;
+        top: 200px;
+        animation: slideInBtn .8s ease-in-out forwards;
+    }
+
+    .showNav i {
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 12px;
+    }
+
+    .slideIn {
+        animation: slideIn .8s ease-in-out forwards;
+    }
+
+    .slideOutBtn {
+        animation: slideOutBtn .8s ease-in-out forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+            transform: translateX(0) translateY(-50%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        from{
+            transform: translateX(0) translateY(-50%);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateX(60px) translateY(-50%);
+            opacity: 0;
+        }
+    }
+    
+
+    @keyframes slideInBtn {
+        from{
+            transform: translateX(60px);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutBtn {
+        to {
+            transform: translateX(60px);
+            opacity: 0;
+        }
+    }
+}

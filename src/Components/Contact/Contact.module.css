@@ -1,0 +1,105 @@
+.content {
+    width: 600px;
+    margin: auto;
+    max-width: 90%;
+}
+
+.link__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 2px 0 #fff;
+    width: 290px;
+}
+
+.link__item:hover {
+    box-shadow: 0 0 5px 0 #fff;
+    transform: scale(1.02);
+}
+
+.link__img {
+    width: 80px;
+    transition: transform .5s linear;
+}
+
+.link__item:hover .link__img{
+    transform: rotateY(180deg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.input__wrap {
+    position: relative;
+    width: 100%;
+    margin: 4px 0;
+}
+
+.input {
+    width: 100%;
+    resize: none;
+    background-color: rgba(153, 153, 153, 0.5);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.txtarea {
+    height: 120px;
+}
+
+.input::placeholder {
+    color: #fff;
+}
+
+.submit {
+    width: 150px;
+    background-color: var(--bg-header);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.8rem;
+    padding: 16px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 5px 0 var(--bg-header);
+    margin-top: 16px;
+}
+
+.submit:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px 2px var(--bg-header);
+}
+
+/* ============================= MOBILE CSS ============================= */
+@media (max-width: 48em) {
+    .link__item {
+        width: 48%;
+    }
+    
+    .submit {
+        width: 100%;
+        padding: 18px;
+    }
+}

@@ -1,0 +1,40 @@
+.btn__section {
+    position: fixed;
+    background: linear-gradient(45deg,var(--bg-nav), var(--bg-header));
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    z-index: 5;
+}
+
+.btn__wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__download,
+.btn__about {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    padding: 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: 80%;
+    text-align: center;
+}
+
+.btn__download {
+    background-color: var(--primary-txt);
+    color: #fff;
+}
+
+.btn__about {
+    background-color: #fff;
+    color: var(--primary-txt);
+}

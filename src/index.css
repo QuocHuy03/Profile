@@ -1,0 +1,89 @@
+/* =============================== IMPORT FONT STYLE =============================== */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+
+/* ================================== VARIABLE ================================== */
+:root {
+  --bg-nav: hsla(262, 52%, 65%, 0.6);
+  --primary-txt: #ee5286;
+  --bg-header: hsla(340, 83%, 84%, 0.8);
+  --sun: #ffce3d;
+  --moon: #232d65;
+}
+
+/* ================================ RESART STYLE CSS ================================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00aefd;
+  border-radius: 100rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 100rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/* ================================ RENGURAL STYLE CSS ================================ */
+.section {
+  padding-top: 60px;
+  height: 100vh;
+}
+
+.section__heading {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 3px #333;
+}
+
+.section__desc {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.section__title {
+  font-size: 4rem;
+  color: var(--sun);
+  margin-top: 12px;
+}
+
+/* =============================== MOBILE CSS =============================== */
+@media (max-width: 48em) {
+  .section {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .section__heading {
+    margin-top: 20px;
+  }
+}

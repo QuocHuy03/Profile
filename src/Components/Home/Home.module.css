@@ -1,0 +1,113 @@
+.grid {
+    display: flex;
+}
+
+.column3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================== BUTTON DOWNLOAD CSS =========================== */
+.btn {
+    transform: rotate(45deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--bg-nav), var(--bg-header));
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 var(--bg-header);
+    position: relative;
+    transition: .2s ease-in-out;
+}
+
+.btn span {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+    transform: rotate(-45deg);
+}
+
+.btn span i {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 41px;
+    transition: top .2s ease-in-out;
+}
+
+.btn span::after,
+.btn span::before {
+    content: '|';
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--bg-header);
+}
+
+.btn span::after {
+    top: 89px
+}
+
+.btn span::before {
+    bottom: 106px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 15px 0 var(--bg-header);
+    transform: rotate(45deg) scale(1.02);
+}
+
+.btn:hover span i{
+    top: 45px;
+}
+
+/* ============================= CONTENT CSS ============================= */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 0 0 20px #333;
+    user-select: none;
+    text-align: center;
+}
+
+.greeting {
+    font-size: 3rem;
+}
+
+.name {
+    font-size: 5rem;
+}
+
+.desc {
+    font-size: 2.2rem;
+    margin-top: 12px;
+}
+
+.img__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 0;
+}
+
+.img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgb(243, 243, 243);
+}
+
+.none {
+    display: none !important;
+}

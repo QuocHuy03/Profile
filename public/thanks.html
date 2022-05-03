@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+    </style>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Fredoka', serif;
+        }
+
+        .video__bg {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .thanks__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: transparent;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .thanks {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 0 0 5px #EE5286;
+            text-align: center;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            background-color: #EE5286;
+            font-size: 2rem;
+            color: #fff;
+            line-height: 2rem;
+            padding: 16px 30px;
+            border-radius: 20px;
+            margin-top: 32px;
+            box-shadow: 0 0 5px 0px #EE5286;
+            transition: .2s ease-in-out;
+        }
+        
+        .back-btn:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 5px 2px #EE5286;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+    <link rel="icon" href="./img/thanks.png" />
+</head>
+
+<body>
+    <video src="vid/video-1.mp4" autoplay loop muted class="video__bg"></video>
+    <div class="thanks__wrap">
+        <h1 class="thanks">Thank you very much ! 😊</h1>
+        <a href="index.html" class="back-btn">Come Back</a>
+    </div>
+</body>
+
+</html>

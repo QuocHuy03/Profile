@@ -1,0 +1,131 @@
+.list {
+    display: flex;
+    width: 600px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    max-width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 16px;
+    border-radius: 10px;
+    width: 160px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    text-shadow: 0 0 2px #333;
+}
+
+.item:hover {
+    box-shadow: 0 0 5px 0 #fff;
+    transform: scale(1.02);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-top: 16px;
+    color: #FFD28E;
+    transition: transform .2s ease-in-out;
+}
+
+.item:hover .icon {
+    transform: scale(1.15);
+}
+
+.modal__wrap {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn .2s ease-in-out;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 64px 32px 32px;
+    position: relative;
+    animation: fadeIn .5s ease-in-out;
+    max-width: 90%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal__close {
+    position: absolute;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    top: 12px;
+    right: 12px;
+    transition: .2s ease-in-out;
+    color: #f32314c7;
+}
+
+.modal__close:hover {
+    transform: scale(1.1);
+    color: #F32314;
+}
+
+.link__wrap {
+    margin-bottom: 16px;
+    display: flex;
+    height: 4rem;
+}
+
+.mocal__icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    color: #28c93f;
+    position: relative;
+    bottom: -4px;
+}
+
+.link {
+    color: #333;
+    font-size: 1.6rem;
+    word-break: break-all;
+}
+
+/* ============================= MOBILE CSS ============================= */
+@media (max-width: 48em) {
+    .list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 48px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .icon {
+        font-size: 6rem;
+    }
+
+    .item {
+        width: 180px;
+        margin: 16px;
+        padding: 30px 0;
+    }
+}

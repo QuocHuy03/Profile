@@ -1,0 +1,135 @@
+.header {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.title {
+    padding: 16px 64px;
+}
+
+.title h1{
+    color: var(--primary-txt);
+    font-size: 3rem;
+    text-shadow: 0 0 2px #fff;
+}
+
+.changeTheme {
+    padding: 0 64px;
+    position: relative;
+    margin-left: auto;
+}
+
+.icon {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 6px 2px #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.icon i {
+    font-size: 2rem;
+    color: #7C89D1;
+    transition: transform .2s ease-in-out;
+    box-shadow: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeOut .5s ease-out forwards;
+    z-index: 8;
+}
+
+.fadeIn {
+    animation: fadeIn .5s ease-in-out forwards;
+}
+
+.item {
+    background-color: #fff;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    box-shadow: 0 0 6px 2px #fff;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: box-shadow .2s ease-in-out;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.video__item {    
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transform: rotate(-45deg);
+}
+
+.item:hover {
+    box-shadow: 0 0 6px 4px #fff;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40%) rotateY(180deg);
+    }
+
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) rotateY(360deg);
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0) rotateY(360deg);
+    }
+
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-40%) rotateY(180deg);
+    }
+}
+
+@media (max-width: 48em) {
+    .changeTheme {
+        padding: 16px;
+    }
+
+    .list{
+        top: calc(100% - 20px);
+    }
+}

@@ -1,0 +1,65 @@
+.btnToTop {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 32px;
+    right: 64px;
+    cursor: pointer;
+    background: linear-gradient(var(--bg-header), var(--bg-nav));
+    box-shadow: 0 0 10px 3px #fff;
+    transition: .2s ease-in-out;
+    animation: slideTop .8s ease-in-out;
+    z-index: 10;
+}
+
+.btnToTop.slideHidden {
+    animation: slideHidden .8s ease-in-out forwards;
+}
+
+
+.btnToTop:hover{
+    box-shadow: 0 0 12px 5px #fff;
+}
+
+.btnToTop i {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #fff;
+    transition: transform .2s ease-in-out;
+}
+
+.btnToTop:hover i{
+    transform: translateY(-2px) scale(1.2);
+}
+
+@keyframes slideTop{
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) rotateY(360deg);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideHidden{
+    to {
+        transform: translateY(100px) rotateY(-360deg);
+        opacity: 0;
+    }
+}
+
+/* ============================= MOBILE CSS ============================= */
+@media (max-width: 48em) {
+    .btnToTop {
+        bottom: 75px;
+        right: 10px;
+    }
+}
