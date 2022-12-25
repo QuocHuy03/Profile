@@ -7,14 +7,10 @@ export const ModalContext = createContext();
 function Projects() {
   const links = {
     html: [
-      //   "https://hai190820.github.io/shop/",
-      //   "https://hai190820.github.io/toastMess/",
-      //   "https://hai190820.github.io/theBand/",
-      //   "https://hai190820.github.io/travel/",
+     //Link vào
     ],
     js: [
-      //   "https://hai190820.github.io/mp3Player/",
-      //   "https://hai190820.github.io/pagesSlider/",
+  //Link vào
     ],
     PHP: ["https://quochuy03.com/"],
   };
